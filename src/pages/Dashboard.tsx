@@ -98,7 +98,7 @@ export default function Dashboard() {
               <Wallet className="w-6 h-6 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-xl font-bold">SpendSmart AI</h1>
+              <h1 className="text-xl font-bold">SpendSmart</h1>
               <p className="text-xs text-muted-foreground">Your Financial Companion</p>
             </div>
           </div>
