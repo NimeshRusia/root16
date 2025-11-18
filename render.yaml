@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: my-react-app
+    env: node
+    plan: free
+    buildCommand: yarn build
+    startCommand: yarn start
