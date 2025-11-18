@@ -1,3 +1,4 @@
+// src/pages/Dashboard.tsx
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
@@ -14,9 +15,11 @@ import {
   Crown,
   TrendingUp,
   AlertCircle,
+  LogOut,
 } from 'lucide-react';
-import { getUserProfile } from '@/lib/storage';
+import { getUserProfile, clearUserProfile } from '@/lib/storage';
 import { UserProfile, CategoryName } from '@/types/budget';
+import { useToast } from '@/hooks/use-toast';
 
 const categoryIcons: Record<CategoryName, any> = {
   food: UtensilsCrossed,
@@ -40,6 +43,7 @@ export default function Dashboard() {
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [greeting, setGreeting] = useState('');
   const navigate = useNavigate();
+  const { toast } = useToast();
 
   useEffect(() => {
     const userProfile = getUserProfile();
@@ -71,6 +75,19 @@ export default function Dashboard() {
     return { category: key as CategoryName, budget, spent, remaining: budget - spent };
   });
 
+  const handleLogout = () => {
+    const ok = window.confirm('Are you sure you want to log out? This will clear your saved profile.');
+    if (!ok) return;
+    clearUserProfile();
+    setProfile(null);
+    toast({
+      title: 'Logged out',
+      description: 'You have been logged out and returned to the landing page.',
+    });
+    // navigate to landing page (Index)
+    navigate('/');
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -85,15 +102,29 @@ export default function Dashboard() {
               <p className="text-xs text-muted-foreground">Your Financial Companion</p>
             </div>
           </div>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => navigate('/subscription')}
-            className="border-primary/30"
-          >
-            <Crown className="w-4 h-4 mr-2" />
-            Upgrade
-          </Button>
+
+          <div className="flex items-center gap-3">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => navigate('/subscription')}
+              className="border-primary/30"
+            >
+              <Crown className="w-4 h-4 mr-2" />
+              Upgrade
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleLogout}
+              className="border-transparent text-destructive"
+              title="Log out"
+            >
+              <LogOut className="w-4 h-4 mr-2" />
+              Logout
+            </Button>
+          </div>
         </div>
       </header>
 
