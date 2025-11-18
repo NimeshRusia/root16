@@ -14,6 +14,7 @@ import CompareFood from "./pages/CompareFood";
 import CompareTravel from "./pages/CompareTravel";
 import CompareShelter from "./pages/CompareShelter";
 import CompareQuickCommerce from "./pages/CompareQuickCommerce";
+import CompareHealthcare from "./pages/CompareHealthcare";
 import Wallet from "./pages/Wallet";
 import Subscription from "./pages/Subscription";
 import NotFound from "./pages/NotFound";
@@ -118,6 +119,15 @@ const App = () => (
           />
           {/* Accept camelCase and redirect to canonical lowercase path */}
           <Route path="/compare/quickCommerce" element={<Navigate to="/compare/quickcommerce" replace />} />
+
+          <Route
+            path="/compare/healthcare"
+            element={
+              <ProtectedRoute>
+                <CompareHealthcare />
+              </ProtectedRoute>
+            }
+          />
 
           <Route
             path="/wallet"
