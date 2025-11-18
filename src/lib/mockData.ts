@@ -1,0 +1,387 @@
+// src/lib/mockData.js
+
+export const foodOptions = [
+  {
+    id: '1',
+    platform: 'Zomato',
+    restaurant: 'China Bowl',
+    cuisine: 'Chinese',
+    price: 250,
+    deliveryFee: 30,
+    totalCost: 280,
+    deliveryTime: '35 min',
+    rating: 4.3,
+    discount: 50,
+    tags: ['Fastest'],
+    imageUrl:
+      'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=300&h=200&fit=crop',
+    // keep zomatoUrl for existing code that uses option.zomatoUrl
+    zomatoUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+    // platformUrl added so other components can open links generically
+    platformUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+  },
+  {
+    id: '2',
+    platform: 'Swiggy',
+    restaurant: 'Wok Express',
+    cuisine: 'Chinese',
+    price: 220,
+    deliveryFee: 25,
+    totalCost: 245,
+    deliveryTime: '40 min',
+    rating: 4.5,
+    discount: 60,
+    tags: ['Cheapest', 'Best Discount'],
+    imageUrl:
+      'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop',
+    zomatoUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+    platformUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+  },
+  {
+    id: '3',
+    platform: 'Zomato',
+    restaurant: 'Green Bowl',
+    cuisine: 'Chinese',
+    price: 300,
+    deliveryFee: 35,
+    totalCost: 335,
+    deliveryTime: '45 min',
+    rating: 4.7,
+    discount: 30,
+    tags: ['Healthiest'],
+    imageUrl:
+      'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&h=200&fit=crop',
+    zomatoUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+    platformUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+  },
+  {
+    id: '4',
+    platform: 'Zomato',
+    restaurant: 'La Piazza',
+    cuisine: 'Italian',
+    price: 700,
+    deliveryFee: 50,
+    totalCost: 650,
+    deliveryTime: '25–35 mins',
+    rating: 4.6,
+    discount: 100,
+    tags: ['Bestseller', 'Pasta'],
+    imageUrl:
+      'https://images.unsplash.com/photo-1541544185271-9c8f8c7f2f6a?w=300&h=200&fit=crop',
+    zomatoUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+    platformUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+  },
+  {
+    id: '5',
+    platform: 'Swiggy',
+    restaurant: 'South Spice',
+    cuisine: 'South Indian',
+    price: 200,
+    deliveryFee: 30,
+    totalCost: 210,
+    deliveryTime: '20–30 mins',
+    rating: 4.2,
+    discount: 20,
+    tags: ['Breakfast'],
+    imageUrl:
+      'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=300&h=200&fit=crop',
+    zomatoUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+    platformUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+  },
+  {
+    id: '6',
+    platform: 'Zomato',
+    restaurant: 'Taco Fiesta',
+    cuisine: 'Mexican',
+    price: 350,
+    deliveryFee: 35,
+    totalCost: 355,
+    deliveryTime: '20–30 mins',
+    rating: 4.1,
+    discount: 30,
+    tags: ['Spicy'],
+    imageUrl:
+      'https://images.unsplash.com/photo-1544025162-d76694265947?w=300&h=200&fit=crop',
+    zomatoUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+    platformUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+  },
+  {
+    id: '7',
+    platform: 'Swiggy',
+    restaurant: 'Thai Bowl',
+    cuisine: 'Thai',
+    price: 420,
+    deliveryFee: 35,
+    totalCost: 405,
+    deliveryTime: '30–40 mins',
+    rating: 4.0,
+    discount: 50,
+    tags: ['Noodles'],
+    imageUrl:
+      'https://images.unsplash.com/photo-1553621042-f6e147245754?w=300&h=200&fit=crop',
+    zomatoUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+    platformUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+  },
+  {
+    id: '8',
+    platform: 'Zomato',
+    restaurant: 'Beirut Bites',
+    cuisine: 'Lebanese',
+    price: 480,
+    deliveryFee: 40,
+    totalCost: 460,
+    deliveryTime: '30–40 mins',
+    rating: 4.5,
+    discount: 60,
+    tags: ['Grill', 'Healthy'],
+    imageUrl:
+      'https://images.unsplash.com/photo-1543353071-087092ec393f?w=300&h=200&fit=crop',
+    zomatoUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+    platformUrl:
+      'https://www.zomato.com/bangalore/sri-udupi-food-hub-koramangala-7th-block-bangalore/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ2hpbmVzZSIsImRpc2hfaWRzIjpbIjE0MjE5NCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D',
+  },
+];
+
+export const rideOptions = [
+  {
+    id: '1',
+    platform: 'Uber',
+    vehicleType: 'Uber Auto',
+    estimatedFare: 120,
+    eta: '5 min',
+    surge: false,
+    rating: 4.6,
+    tags: ['Fastest'],
+    // Uber reference deep-link (added as requested)
+    platformUrl:
+      'https://m.uber.com/go/product-selection?drop%5B0%5D=%7B%22addressLine1%22%3A%22Kempegowda%20International%20Airport%20Bengaluru%22%2C%22addressLine2%22%3A%22Karnataka%22%2C%22id%22%3A%22ChIJZWJEdf4crjsRjkEpoelwbCk%22%2C%22source%22%3A%22SEARCH%22%2C%22latitude%22%3A13.198909%2C%22longitude%22%3A77.7068926%2C%22provider%22%3A%22google_places%22%7D&effect=&marketing_vistor_id=98eea85e-6b59-4878-8692-b6ba7ac06445&pickup=%7B%22addressLine1%22%3A%22Nish%207%20Apartments%22%2C%22addressLine2%22%3A%22Ashwatnagar%2C%20NO.%2C%2028%2C%201st%20Cross%20Rd%2C%20RMV%202nd%20Stage%2C%20Ashwath%20Nagar%2C%20R.M.V.%202nd%20Stage%2C%20Bengaluru%2C%20Karnataka%22%2C%22id%22%3A%22ChIJn6NrfsYXrjsRbgMzQmo91mY%22%2C%22source%22%3A%22SEARCH%22%2C%22latitude%22%3A13.0256998%2C%22longitude%22%3A77.5794183%2C%22provider%22%3A%22google_places%22%7D&uclick_id=73bc758b-c635-48fb-9973-7d579f28318d&vehicle=20030587',
+  },
+  {
+    id: '2',
+    platform: 'Ola',
+    vehicleType: 'Ola Auto',
+    estimatedFare: 95,
+    eta: '7 min',
+    surge: false,
+    rating: 4.4,
+    tags: ['Cheapest'],
+    platformUrl: null,
+  },
+  {
+    id: '3',
+    platform: 'Rapido',
+    vehicleType: 'Rapido Bike',
+    estimatedFare: 65,
+    eta: '4 min',
+    surge: false,
+    rating: 4.5,
+    tags: ['Cheapest', 'Fastest'],
+    platformUrl: null,
+  },
+  {
+    id: '4',
+    platform: 'NammaYatri',
+    vehicleType: 'Auto',
+    estimatedFare: 85,
+    eta: '6 min',
+    surge: false,
+    rating: 4.7,
+    tags: ['Best Value'],
+    platformUrl: null,
+  },
+];
+
+export const shelterOptions = [
+  {
+    id: '1',
+    platform: 'NoBroker',
+    title: '2BHK in Koramangala',
+    rent: 18000,
+    deposit: 36000,
+    amenities: ['WiFi', 'Power Backup', 'Parking'],
+    distance: '2.5 km',
+    rating: 4.5,
+    tags: ['Best Value'],
+  },
+  {
+    id: '2',
+    platform: 'Nestaway',
+    title: 'Shared PG in HSR Layout',
+    rent: 12000,
+    deposit: 12000,
+    amenities: ['WiFi', 'Meals', 'Laundry'],
+    distance: '3.8 km',
+    rating: 4.3,
+    tags: ['Cheapest'],
+  },
+  {
+    id: '3',
+    platform: 'Zolo',
+    title: '1RK Studio in BTM',
+    rent: 15000,
+    deposit: 30000,
+    amenities: ['WiFi', 'Gym', 'Power Backup'],
+    distance: '1.2 km',
+    rating: 4.6,
+    tags: ['Closest'],
+  },
+];
+
+export const quickCommerceOptions = [
+  {
+    id: 'qc-1',
+    platform: 'BigBasket',
+    title: 'Tandoori Sauce - 500g (Amul)',
+    brand: 'Amul',
+    price: 199,
+    deliveryFee: 25,
+    totalCost: 224,
+    deliveryTime: '30-45 mins',
+    rating: 4.2,
+    discount: 20,
+    tags: ['Fast Delivery'],
+    imageUrl: 'https://images.unsplash.com/photo-1604908177522-3f7f0d8f8b3e?w=400&h=300&fit=crop',
+    platformUrl: 'https://www.bigbasket.com/pd/quick/tandoori-sauce-amul',
+  },
+  {
+    id: 'qc-2',
+    platform: 'DMart',
+    title: "Tandoori Marinade - 400g (Mother's)",
+    brand: "Mother's",
+    price: 159,
+    deliveryFee: 25,
+    totalCost: 184,
+    deliveryTime: '25-35 mins',
+    rating: 4.0,
+    discount: 10,
+    tags: ['Value Pack'],
+    imageUrl: 'https://images.unsplash.com/photo-1564758866814-7f13ad05a8e8?w=400&h=300&fit=crop',
+    platformUrl: 'https://www.dmart.com/search?q=tandoori%20sauce',
+  },
+  {
+    id: 'qc-3',
+    platform: 'Amazon',
+    title: 'Tandoori Sauce - 350g (Local Brand)',
+    brand: 'SpiceWorld',
+    price: 129,
+    deliveryFee: 0,
+    totalCost: 129,
+    deliveryTime: '2-3 days',
+    rating: 3.9,
+    discount: 5,
+    tags: ['Cheapest'],
+    imageUrl: 'https://images.unsplash.com/photo-1584270354949-5f7a3b6d5a3c?w=400&h=300&fit=crop',
+    platformUrl: 'https://www.amazon.in/s?k=tandoori+sauce',
+  },
+  {
+    id: 'qc-4',
+    platform: 'Local Store',
+    title: 'Tandoori Paste - 250g (HomeMade)',
+    brand: 'HomeMade',
+    price: 89,
+    deliveryFee: 10,
+    totalCost: 99,
+    deliveryTime: '20-30 mins',
+    rating: 4.5,
+    discount: 0,
+    tags: ['Local'],
+    imageUrl: 'https://images.unsplash.com/photo-1542444459-db280b4a1a60?w=400&h=300&fit=crop',
+    platformUrl: null,
+  },
+  {
+    id: 'qc-5',
+    platform: 'Local Store',
+    title: 'Milk',
+    brand: 'Nandini',
+    price: 89,
+    deliveryFee: 10,
+    totalCost: 99,
+    deliveryTime: '20-30 mins',
+    rating: 4.5,
+    discount: 0,
+    tags: ['Local'],
+    imageUrl: 'https://images.unsplash.com/photo-1542444459-db280b4a1a60?w=400&h=300&fit=crop',
+    platformUrl: null,
+  },
+];
+
+export const healthcareOptions = [
+  {
+    id: 'hc-1',
+    name: 'Ramaiah Memorial Hospital',
+    platform: 'Ramaiah',
+    address: 'New BEL Road, MSR Nagar, Bengaluru, Karnataka',
+    mapsUrl: 'https://maps.app.goo.gl/9kfnhUz7dM9eJPDL7',
+    consultationFee: 650,
+    dressingFee: 250,
+    medicineEstimate: 400,
+    rating: 4.5,
+    openingHours: '24 Hours',
+    tags: ['Multi-speciality', 'Emergency', 'Nearby'],
+    imageUrl:
+      'https://images.unsplash.com/photo-1580281657528-7b7f3b0c5a9d?w=600&h=400&fit=crop',
+  },
+
+  {
+    id: 'hc-2',
+    name: 'Aster CMI Hospital',
+    platform: 'Aster',
+    address: 'Hebbal, Bengaluru, Karnataka',
+    mapsUrl: 'https://maps.app.goo.gl/aSrt3oXCA78kBAVs9',
+    consultationFee: 800,
+    dressingFee: 300,
+    medicineEstimate: 500,
+    rating: 4.6,
+    openingHours: '24 Hours',
+    tags: ['Premium Care', 'Diagnostics'],
+    imageUrl:
+      'https://images.unsplash.com/photo-1580281657528-7b7f3b0c5a9d?w=600&h=400&fit=crop',
+  },
+
+  {
+    id: 'hc-3',
+    name: 'Baptist Hospital',
+    platform: 'Baptist',
+    address: 'Hebbal, Bellary Road, Bengaluru, Karnataka',
+    mapsUrl: 'https://maps.app.goo.gl/yV6KJ8Qof8RP4giE7',
+    consultationFee: 550,
+    dressingFee: 200,
+    medicineEstimate: 350,
+    rating: 4.4,
+    openingHours: '24 Hours',
+    tags: ['General Physician', 'Affordable'],
+    imageUrl:
+      'https://images.unsplash.com/photo-1580281657528-7b7f3b0c5a9d?w=600&h=400&fit=crop',
+  },
+
+  {
+    id: 'hc-4',
+    name: 'Apollo Dental Clinic',
+    platform: 'Apollo Dental',
+    address: 'RMV 2nd Stage, New BEL Road, Bengaluru, Karnataka',
+    mapsUrl: 'https://maps.app.goo.gl/da3fWc4WKbQ7jzqMA',
+    consultationFee: 300,
+    dressingFee: 0, // dental usually doesn't have "dressing" fee
+    medicineEstimate: 150,
+    rating: 4.3,
+    openingHours: '10:00 AM - 8:00 PM',
+    tags: ['Dental', 'Nearby', 'Affordable'],
+    imageUrl:
+      'https://images.unsplash.com/photo-1580281657528-7b7f3b0c5a9d?w=600&h=400&fit=crop',
+  },
+];
