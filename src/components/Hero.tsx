@@ -18,19 +18,19 @@ export const Hero = () => {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 backdrop-blur-sm">
           <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm font-medium text-foreground">AI-Powered Financial Intelligence</span>
+          <span className="text-sm font-medium text-foreground">Your Financial Companion</span>
         </div>
 
         {/* Heading */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-          <span className="bg-gradient-accent bg-clip-text text-transparent">Spend Smarter,</span>
+          <span className="bg-gradient-accent bg-clip-text text-transparent">Spend Smarter</span>
           <br />
           <span className="text-foreground">Save Better</span>
         </h1>
 
         {/* Subheading */}
         <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
-          Transform your financial future with AI-powered insights. Track expenses automatically, 
+          Transform your financial future with insights. Track expenses automatically, 
           get personalized recommendations, and achieve your savings goals faster.
         </p>
 
@@ -59,7 +59,7 @@ export const Hero = () => {
         {/* Stats */}
         <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto pt-8 border-t border-border/50">
           <div>
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">$2.4M+</div>
+            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">₹2.4M+</div>
             <div className="text-sm text-muted-foreground">Money Saved</div>
           </div>
           <div>
